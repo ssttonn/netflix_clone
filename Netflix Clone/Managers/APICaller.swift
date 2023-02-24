@@ -93,4 +93,44 @@ class APICaller{
         }
         task.resume()
     }
+    
+    func getDiscoverMovies(completion: @escaping (Result<[Movie], Error>)-> Void){
+        guard let url = URL(string: "\(APIConstants.BASE_URL)/3/discover/movie?api_key=\(APIConstants.API_KEY)&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate") else {return}
+        let request = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else{
+                return
+            }
+            
+            do{
+                let results = try JSONDecoder().decode(MoviesResponse.self, from: data)
+                completion(.success(results.results))
+            }catch{
+                completion(.failure(error))
+            }
+        }
+        
+        task.resume()
+    }
+    
+    func search(query: String, completion: @escaping (Result<[Movie], Error>)-> Void){
+        guard let url = URL(string: "\(APIConstants.BASE_URL)/3/search/movie?api_key=\(APIConstants.API_KEY)&query=\(query)") else{
+            return
+        }
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do{
+                let results = try JSONDecoder().decode(MoviesResponse.self, from: data)
+                completion(.success(results.results))
+            }catch{
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }
