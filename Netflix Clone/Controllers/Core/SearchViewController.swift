@@ -64,6 +64,28 @@ extension SearchViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let movie = movies[indexPath.row]
+        
+        guard let movieTitle = movie.title ?? movie.original_title ?? movie.name, let movieOverview = movie.overview else{
+            return
+        }
+        
+        APICaller.shared.searchYoutubeTrailer(withName: movieTitle) {result in
+            switch result {
+            case .success(let youtubeMovieElement):
+                DispatchQueue.main.async {
+                    let vc = MoviePreviewViewController()
+                    vc.configure(with: MoviePreviewViewModel(title: movieTitle, overview: movieOverview, youtubeVideoElement: youtubeMovieElement))
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 extension SearchViewController: UITableViewDataSource{
@@ -81,7 +103,17 @@ extension SearchViewController: UITableViewDataSource{
         return cell
     }
     
- 
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(actionProvider:  { _ in
+            let downloadAction = UIAction(title: "Download") { _ in
+                
+            }
+            
+            return UIMenu(children: [downloadAction])
+        })
+        
+        return config
+    }
 }
 
 extension SearchViewController: UISearchResultsUpdating{
@@ -94,6 +126,8 @@ extension SearchViewController: UISearchResultsUpdating{
             return
         }
         
+        searchResultController.delegate = self
+        
         APICaller.shared.search(query: query) { result in
             switch result{
             case .success(let movies):
@@ -105,6 +139,16 @@ extension SearchViewController: UISearchResultsUpdating{
                 print(error)
             }
         }
+    }
+    
+    
+}
+
+extension SearchViewController: SearchResultsViewControllerDelegate{
+    func searchResultsViewControllerDidTapCell(_ searchResultsViewController: SearchResultsViewController, viewModel: MoviePreviewViewModel) {
+        let vc = MoviePreviewViewController()
+        vc.configure(with: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

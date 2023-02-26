@@ -88,4 +88,8 @@ class HeroHeaderUIView: UIView {
         fatalError()
     }
     
+    func configure(with viewModel: MovieViewModel){
+        guard let posterUrl = URL(string: "https://image.tmdb.org/t/p/w500/\(viewModel.posterURL)") else {return}
+        heroImageView.sd_setImage(with: posterUrl)
+    }
 }

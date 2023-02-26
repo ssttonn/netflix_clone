@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SearchResultsViewControllerDelegate: AnyObject{
+    func searchResultsViewControllerDidTapCell(_ searchResultsViewController: SearchResultsViewController, viewModel: MoviePreviewViewModel)
+}
+
 class SearchResultsViewController: UIViewController {
 
     var movies: [Movie] = [Movie]()
+    
+    public weak var delegate: SearchResultsViewControllerDelegate?
     
     var searchCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -38,7 +44,28 @@ class SearchResultsViewController: UIViewController {
 }
 
 extension SearchResultsViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let movie = movies[indexPath.row]
+        
+        guard let movieTitle = movie.title ?? movie.original_title ?? movie.name, let movieOverview = movie.overview else {
+            return
+        }
+        
+        APICaller.shared.searchYoutubeTrailer(withName: movieTitle) { result in
+            switch result{
+            case .success(let youtubeMovieElement):
+                DispatchQueue.main.async {
+                    self.delegate?.searchResultsViewControllerDidTapCell(self, viewModel: MoviePreviewViewModel(title: movieTitle, overview: movieOverview, youtubeVideoElement: youtubeMovieElement))
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+       
+    }
 }
 
 extension SearchResultsViewController: UICollectionViewDataSource{

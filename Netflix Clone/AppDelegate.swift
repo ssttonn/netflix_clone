@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    lazy var persitentContainer: NSPersistentContainer = {
+            let container = NSPersistentContainer(name: "NetflixCloneModel")
+        container.loadPersistentStores { description, error in
+                    if let error = error {
+                        fatalError("Unable to load persistent stores: \(error)")
+                    }
+                }
+        return container
+    }()
+    
+    func saveContext(){
+        let context = persitentContainer.viewContext
+        if context.hasChanges {
+            do{
+                try context.save()
+            }catch{
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.localizedDescription)")
+            }
+        }
+    }
 }
 

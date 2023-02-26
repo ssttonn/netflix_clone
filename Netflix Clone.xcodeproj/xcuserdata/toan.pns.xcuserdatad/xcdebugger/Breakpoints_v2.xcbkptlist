@@ -14,8 +14,8 @@
             filePath = "Netflix Clone/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "getUpcomingMovies(completion:)"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "Netflix Clone/Managers/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "getUpcomingMovies(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,6 +72,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "86739CCA-9FA5-406F-B4F1-EC4DEE3E7EE4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getUpcomingMovies(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "790544E0-4EA8-4028-8CA6-0E4399F2A3D2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -87,22 +103,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "790544E0-4EA8-4028-8CA6-0E4399F2A3D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Netflix Clone/Managers/APICaller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "getUpcomingMovies(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "35F4182C-3AD8-4486-BCC0-26C21EDBD961"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -110,8 +110,8 @@
             filePath = "Netflix Clone/Views/CollectionViewTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "Netflix Clone/Controllers/Core/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "updateSearchResults(for:)"
             landmarkType = "7">
             <Locations>
@@ -174,8 +174,8 @@
             filePath = "Netflix Clone/Controllers/Core/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "updateSearchResults(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "Netflix Clone/Controllers/Core/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "updateSearchResults(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "Netflix Clone/Controllers/General/SearchResultsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "Netflix Clone/Controllers/General/SearchResultsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,9 +238,217 @@
             filePath = "Netflix Clone/Controllers/General/SearchResultsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F30EE6F-6D47-4C0A-82E6-38788CBBA488"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Views/CollectionViewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F30EE6F-6D47-4C0A-82E6-38788CBBA488 - d2da9022ea0f6223"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Netflix_Clone.CollectionViewTableViewCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Views/CollectionViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "8F30EE6F-6D47-4C0A-82E6-38788CBBA488 - bf821da50fb7a4aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Netflix_Clone.YoutubeVideoElement, Swift.Error&gt;) -&gt; () in Netflix_Clone.CollectionViewTableViewCell.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Views/CollectionViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A80C8E8-37EE-49C9-897A-0DB590F2BCC9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A80C8E8-37EE-49C9-897A-0DB590F2BCC9 - e564ea287a17eadb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Netflix_Clone.APICaller.searchYoutubeTrailer(withName: Swift.String, completion: (Swift.Result&lt;Netflix_Clone.YoutubeVideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  uuid = "1A80C8E8-37EE-49C9-897A-0DB590F2BCC9 - e6ee6e9b0add7ad2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Netflix_Clone.APICaller.searchYoutubeTrailer(withName: Swift.String, completion: (Swift.Result&lt;Netflix_Clone.YoutubeVideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E0A4889-1D22-48E5-9A4F-3E6E294E5B71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E0A4889-1D22-48E5-9A4F-3E6E294E5B71 - e564ea287a17eadb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Netflix_Clone.APICaller.searchYoutubeTrailer(withName: Swift.String, completion: (Swift.Result&lt;Netflix_Clone.YoutubeVideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "1972">
+               </Location>
+               <Location
+                  uuid = "8E0A4889-1D22-48E5-9A4F-3E6E294E5B71 - e6ee6e9b0add7ad2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Netflix_Clone.APICaller.searchYoutubeTrailer(withName: Swift.String, completion: (Swift.Result&lt;Netflix_Clone.YoutubeVideoElement, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Netflix Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/toan.pns/Desktop/ios/Netflix%20Clone/Netflix%20Clone/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAEE962F-B59D-4A3D-A78A-6A5D3531FA23"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5381491-0D33-4DF8-A5C6-FFF0DC9A3D41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A62D1C32-FE40-4505-B0B2-294B66D6398A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B198C027-4DA8-4CE5-B88F-028F7F22E2D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Netflix Clone/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "searchYoutubeTrailer(withName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

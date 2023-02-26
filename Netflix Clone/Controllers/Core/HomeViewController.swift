@@ -25,6 +25,10 @@ class HomeViewController: UIViewController {
         "Top rated"
     ]
     
+    private var headerMovie: Movie?
+    
+    private var headerView: HeroHeaderUIView? = nil
+    
     private let homeFeedTable: UITableView = {
         // init a UITableView
         let table = UITableView(frame: .zero, style: .grouped)
@@ -46,10 +50,8 @@ class HomeViewController: UIViewController {
         
         configureNavBar()
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        self.headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
-        
-        fetchData()
     }
     
     private func configureNavBar(){
@@ -71,49 +73,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    
-    func fetchData(){
-        //        APICaller.shared.getTrendingMovies {results in
-        //            switch(results){
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        //        APICaller.shared.getTrendingTvs{ results in
-        //            switch results{
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        //        APICaller.shared.getPopularMovies{ results in
-        //            switch results{
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        //        APICaller.shared.getUpcomingMovies{ results in
-        //            switch results{
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        //        APICaller.shared.getTopRatedMovies{ results in
-        //            switch results{
-        //            case .success(let movies):
-        //                print(movies)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-    }
 }
 
 extension HomeViewController: UITableViewDelegate{
@@ -168,11 +127,16 @@ extension HomeViewController: UITableViewDataSource{
             return UITableViewCell()
         }
         
+        cell.delegate = self
+        
         switch indexPath.section{
         case Section.trendingMovies.rawValue:
             APICaller.shared.getTrendingMovies {result in
                 switch result{
                 case .success(let movies):
+                    self.headerMovie = movies.randomElement()
+                    
+                    self.headerView?.configure(with: MovieViewModel(titleName: self.headerMovie?.title ?? self.headerMovie?.original_title ?? self.headerMovie?.name ?? "Unknown", posterURL: self.headerMovie?.poster_path ?? ""))
                     cell.configure(movies: movies)
                 case .failure(let error):
                     print(error)
@@ -221,4 +185,16 @@ extension HomeViewController: UITableViewDataSource{
         return cell
         
     }
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate{
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: MoviePreviewViewModel) {
+        DispatchQueue.main.async {
+            let vc = MoviePreviewViewController()
+            vc.configure(with: viewModel)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    
 }
